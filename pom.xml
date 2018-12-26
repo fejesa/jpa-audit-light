@@ -24,6 +24,9 @@
 		<version.surefire.plugin>3.0.0-M3</version.surefire.plugin>
 		<version.war.plugin>3.0.0</version.war.plugin>
 
+		<version.javax.interceptor>1.2.2</version.javax.interceptor>
+		<version.slf4j>1.7.22</version.slf4j>
+
 		<!-- maven-compiler-plugin -->
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -70,10 +73,11 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- Import interceptor API used for auditing -->
 		<dependency>
 			<groupId>javax.interceptor</groupId>
 			<artifactId>javax.interceptor-api</artifactId>
-			<version>1.2.2</version>
+			<version>${version.javax.interceptor}</version>
 		</dependency>
 
 		<!-- Import the EJB API, we use provided scope as the API is included in 
@@ -82,6 +86,12 @@
 			<groupId>org.jboss.spec.javax.ejb</groupId>
 			<artifactId>jboss-ejb-api_3.2_spec</artifactId>
 			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${version.slf4j}</version>
 		</dependency>
 
 		<!-- Needed for running tests (you may also use TestNG) -->
