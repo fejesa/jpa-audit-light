@@ -1,12 +1,18 @@
 package com.foo.security;
 
+/**
+ * Wraps the user identifier. {@code UserContext} instance can be created after
+ * - for example - the authentication.
+ *
+ */
 public final class UserContext {
 
 	private long userId;
 
 	private String userName;
 
-	public UserContext() {}
+	public UserContext() {
+	}
 
 	public UserContext(long userId) {
 		this.userId = userId;

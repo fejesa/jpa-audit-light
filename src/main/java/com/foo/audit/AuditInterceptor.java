@@ -5,6 +5,10 @@ import javax.interceptor.InvocationContext;
 
 import com.foo.security.UserContext;
 
+/**
+ * Sets the security context for service APIs that use {@code UserContext}.
+ *
+ */
 public class AuditInterceptor {
 
 	@AroundInvoke
@@ -22,5 +26,4 @@ public class AuditInterceptor {
 			SecurityContextHolder.removeContext();
 		}
 	}
-
 }

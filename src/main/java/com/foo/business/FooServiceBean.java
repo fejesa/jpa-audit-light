@@ -25,6 +25,9 @@ public class FooServiceBean implements FooBusiness {
 	@Inject
 	private EntityManager em;
 
+	/**
+	 * Marks the API that it should be audited.
+	 */
 	@Interceptors({ AuditInterceptor.class })
 	@Override
 	public void create(String name, UserContext user) {

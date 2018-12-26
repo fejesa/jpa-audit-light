@@ -23,6 +23,9 @@ import com.foo.security.UserContext;
 @RunWith(Arquillian.class)
 public class BusinessTest {
 
+	/**
+	 * Creates the WAR module with EJB support.
+	 */
 	@Deployment
 	public static Archive<?> createTestArchive() {
 		return ShrinkWrap.create(WebArchive.class, "jpa-sample.war")

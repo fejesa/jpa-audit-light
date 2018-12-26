@@ -5,6 +5,9 @@ import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
+/**
+ * Extends by entities that should be audited. Holds the audit information.
+ */
 @MappedSuperclass
 public abstract class AuditedEntity {
 

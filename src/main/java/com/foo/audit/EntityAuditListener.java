@@ -8,6 +8,10 @@ import javax.persistence.PreUpdate;
 import com.foo.model.AuditedEntity;
 import com.foo.security.UserContext;
 
+/**
+ * JPA listener when called when the entity state is changed.
+ * It sets the entity modifier user.
+ */
 public class EntityAuditListener {
 
 	@PrePersist
@@ -28,6 +32,9 @@ public class EntityAuditListener {
 		}
 	}
 
+	/**
+	 * Read the security info from the context.
+	 */
 	private Long getUserId() {
 		UserContext userContext = SecurityContextHolder.getContext();
 		if (userContext != null) {
