@@ -21,7 +21,7 @@
 		<version.jboss.bom>15.0.0.Final</version.jboss.bom>
 
 		<!-- other plug-in versions -->
-		<version.surefire.plugin>2.10</version.surefire.plugin>
+		<version.surefire.plugin>3.0.0-M3</version.surefire.plugin>
 		<version.war.plugin>3.0.0</version.war.plugin>
 
 		<!-- maven-compiler-plugin -->
@@ -31,7 +31,6 @@
 
 	<dependencyManagement>
 		<dependencies>
-
 			<dependency>
 				<groupId>org.wildfly.bom</groupId>
 				<artifactId>wildfly-javaee8-with-tools</artifactId>
@@ -69,6 +68,12 @@
 			<groupId>javax.persistence</groupId>
 			<artifactId>javax.persistence-api</artifactId>
 			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.interceptor</groupId>
+			<artifactId>javax.interceptor-api</artifactId>
+			<version>1.2.2</version>
 		</dependency>
 
 		<!-- Import the EJB API, we use provided scope as the API is included in 
