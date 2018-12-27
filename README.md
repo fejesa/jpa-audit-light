@@ -44,3 +44,14 @@ jpa-sample=# select * from a_foo;
 As you can see in this solution we can record time, user and operation type information.
 
 If you primary goal is only recording the last audit events, then you can get rid of SQL functions and triggers, so audit table is not neccessary.
+
+Testing
+For testing our example we use Arquillian (http://arquillian.org/) framework.
+Running Arquillian Test with a managed container:
+```
+mvn clean test -Parq-wildfly-managed
+```
+Running Arquillian Test with a remote container
+```
+mvn clean test -Parq-wildfly-remote
+```
