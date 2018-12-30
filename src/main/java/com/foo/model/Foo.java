@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "FOO")
-public class Foo extends BaseEntity {
+public class Foo extends AuditedEntity {
 
 	@Column(name = "name")
 	private String name;
