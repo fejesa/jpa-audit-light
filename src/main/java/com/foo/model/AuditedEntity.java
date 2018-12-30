@@ -9,7 +9,7 @@ import javax.persistence.MappedSuperclass;
  * Extends by entities that should be audited. Holds the audit information.
  */
 @MappedSuperclass
-public abstract class AuditedEntity {
+public abstract class AuditedEntity extends BaseEntity {
 
 	@Column(name = "creation_time")
 	private LocalDateTime creationTime;

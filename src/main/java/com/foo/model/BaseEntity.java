@@ -7,7 +7,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.SequenceGenerator;
 
 @MappedSuperclass
-public class BaseEntity extends AuditedEntity {
+public abstract class BaseEntity {
 
 	@Id
 	@SequenceGenerator(name = "id_gen", sequenceName = "id_sequence", allocationSize = 1)
